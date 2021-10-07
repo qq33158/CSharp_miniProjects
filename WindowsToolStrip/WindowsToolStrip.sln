@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsToolStrip", "WindowsToolStrip.csproj", "{79AED640-E5F1-4121-B7B2-63188B63CC43}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{79AED640-E5F1-4121-B7B2-63188B63CC43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79AED640-E5F1-4121-B7B2-63188B63CC43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79AED640-E5F1-4121-B7B2-63188B63CC43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79AED640-E5F1-4121-B7B2-63188B63CC43}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3B04F025-22E9-4B52-A1FE-422840C1E3C1}
+	EndGlobalSection
+EndGlobal
