@@ -90,7 +90,7 @@ namespace WebApplication1.Services
             {
                 Data = null;
             }
-            finally 
+            finally
             {
                 conn.Close();
             }
@@ -120,11 +120,23 @@ namespace WebApplication1.Services
             {
                 Data = null;
             }
-            finally 
+            finally
             {
                 conn.Close();
             }
             return Data;
+        }
+        #endregion
+
+        #region 帳號註冊重複確認
+        //確認要註冊帳號是否有被註冊過的方法
+        public bool AccountCheck(string Account)
+        {
+            //藉由傳入帳號取得會員資料
+            Members Data = GetDataByAccount(Account);
+            //判斷是否有查詢到會員
+            bool result = (Data == null);
+            return result;
         }
         #endregion
 
@@ -159,7 +171,7 @@ namespace WebApplication1.Services
                     ValidateStr = "驗證碼錯誤,請重新確認或再註冊";
                 }
             }
-            else 
+            else
             {
                 ValidateStr = "傳送資料錯誤,請重新確認或再註冊";
             }
@@ -232,7 +244,7 @@ namespace WebApplication1.Services
                 }
                 return "密碼修改成功";
             }
-            else 
+            else
             {
                 return "舊密碼輸入錯誤";
             }
@@ -247,7 +259,7 @@ namespace WebApplication1.Services
 
             Members LoginMember = GetDataByAccount(Account);
             // 判斷資料庫欄位 用已確認是否為Admin
-            if (LoginMember.IsAdmin) 
+            if (LoginMember.IsAdmin)
             {
                 Role += ",Admin";
             }

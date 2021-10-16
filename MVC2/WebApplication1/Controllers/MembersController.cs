@@ -8,10 +8,24 @@ using System.Web.Mvc;
 using WebApplication1.Security;
 using WebApplication1.Services;
 using WebApplication1.ViewModels;
+
 namespace WebApplication1.Controllers
 {
     public class MembersController : Controller
     {
+        //宣告Members資料表的Service物件
+        private readonly MembersDBService membersService = new MembersDBService();
+        //宣告寄信用的Service物件
+        private readonly MailService mailService = new MailService();
+        //宣告Cart相關的Service物件
+        private readonly CartService cartService = new CartService();
+
+        // GET: Members
+        public ActionResult Index()
+        {
+            return View();
+        }
+
         #region 註冊
         //註冊一開始顯示頁面
         public ActionResult Register()

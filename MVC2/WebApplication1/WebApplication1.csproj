@@ -123,7 +123,11 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AlbumController.cs" />
+    <Compile Include="Controllers\BlogController.cs" />
+    <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ItemController.cs" />
     <Compile Include="Controllers\MembersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -138,13 +142,30 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Security\JwtObject.cs" />
     <Compile Include="Security\JwtService.cs" />
+    <Compile Include="Services\AlbumDBService.cs" />
+    <Compile Include="Services\ArticleDBService.cs" />
+    <Compile Include="Services\CartService.cs" />
+    <Compile Include="Services\ForPaging.cs" />
+    <Compile Include="Services\ItemService.cs" />
     <Compile Include="Services\MailService.cs" />
     <Compile Include="Services\MembersDBService.cs" />
+    <Compile Include="Services\MessageDBService.cs" />
+    <Compile Include="ViewModels\AlbumViewModel.cs" />
+    <Compile Include="ViewModels\ArticleIndexViewModel.cs" />
+    <Compile Include="ViewModels\ArticleViewModel.cs" />
+    <Compile Include="ViewModels\BlogViewModel.cs" />
+    <Compile Include="ViewModels\CartBuyViewModel.cs" />
+    <Compile Include="ViewModels\HomeViewModel.cs" />
+    <Compile Include="ViewModels\ItemCreateViewModel.cs" />
+    <Compile Include="ViewModels\ItemDetailViewModel.cs" />
+    <Compile Include="ViewModels\ItemViewModel.cs" />
     <Compile Include="ViewModels\MembersChangePasswordViewModel.cs" />
     <Compile Include="ViewModels\MembersLoginViewModel.cs" />
     <Compile Include="ViewModels\MembersRegisterViewModel.cs" />
+    <Compile Include="ViewModels\MessageViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\AlbumCarousel.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -181,6 +202,24 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Album\Carousel.cshtml" />
+    <Content Include="Views\Album\Create.cshtml" />
+    <Content Include="Views\Album\Index.cshtml" />
+    <Content Include="Views\Album\List.cshtml" />
+    <Content Include="Views\Blog\Article.cshtml" />
+    <Content Include="Views\Blog\ArticleList.cshtml" />
+    <Content Include="Views\Blog\CreateArticle.cshtml" />
+    <Content Include="Views\Blog\CreateMessage.cshtml" />
+    <Content Include="Views\Blog\EditArticle.cshtml" />
+    <Content Include="Views\Blog\Index.cshtml" />
+    <Content Include="Views\Blog\Message.cshtml" />
+    <Content Include="Views\Blog\MessageList.cshtml" />
+    <Content Include="Views\Blog\ShowPopularity.cshtml" />
+    <Content Include="Views\Cart\Index.cshtml" />
+    <Content Include="Views\Item\Create.cshtml" />
+    <Content Include="Views\Item\Index.cshtml" />
+    <Content Include="Views\Item\Item.cshtml" />
+    <Content Include="Views\Item\ItemBlock.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
